@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\CatalogSearch\Model\Search\IndexBuilder">
+        <plugin name="amastyImprovedSearch" type="Amasty\ImprovedSearch\Plugin\CatalogSearch\Model\Search\IndexBuilder"/>
+    </type>
+    <type name="Magento\CatalogSearch\Model\Search\FilterMapper\TermDropdownStrategy">
+        <plugin name="amastyImprovedSearch" type="Amasty\ImprovedSearch\Plugin\CatalogSearch\Model\Search\FieldMapper\TermDropdownStrategy"/>
+    </type>
+    <type name="Magento\Framework\App\Config">
+        <plugin name="amastyImprovedSearch" type="Amasty\ImprovedSearch\Plugin\Framework\App\Config"/>
+    </type>
+    <type name="Magento\Framework\Search\Adapter\Mysql\Mapper">
+        <plugin name="amastyImprovedSearch" type="Amasty\ImprovedSearch\Plugin\Framework\Search\Adapter\Mysql\Mapper"/>
+    </type>
+</config>
